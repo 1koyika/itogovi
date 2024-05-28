@@ -132,7 +132,6 @@ main {
 }
 
 footer {
-    margin-top: 50%;
     background-color: #333;
     color: white;
     text-align: center;
@@ -221,4 +220,3 @@ i{
     .hero {
       width: 800px;
     }
-  }
