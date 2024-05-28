@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Форма заказа цветов</title>
+<link rel="stylesheet" href="styles.css">
+<header>
+    <h1>FlooverS</h1>
+    <nav>
+        <ul>
+            <li><a class="linf" href="index.html">Главная</a></li>
+            <li><a class="linf" href="page.html">Каталог товаров</a></li>
+            <li><a class="linf" href="page2.html">Оформление заказа</a></li>
+        </ul>
+    </nav>
+    <img class="eref" alt="rge" src="Group 1-mdpi.png">
+</header>
+<style>
+    .form-popup {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ccc;
+        max-width: 400px;
+        z-index: 2;
+    }
+
+    .form-container {
+        text-align: center;
+    }
+
+    .open-button {
+        background-color: #f9f9f9;
+        color: black;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <button class="open-button" onclick="openForm()">Открыть форму заказа</button>
+    <div class="form-popup" id="myForm">
+        <div class="form-container">
+            <h2>Оформление заказа цветов</h2>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea><br><br>
+            <button type="submit">Отправить заказ</button>
+            <button type="button" class="open-button" onclick="closeForm()">Закрыть</button>
+        </div>
+    </div>
+    
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; 2021 Онлайн магазин цветов</p>
+</footer>
+</html>
